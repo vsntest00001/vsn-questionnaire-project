@@ -1,0 +1,2 @@
+module DeleteConfirmHelper
+end

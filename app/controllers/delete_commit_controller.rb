@@ -1,0 +1,2 @@
+class DeleteCommitController < ApplicationController
+end

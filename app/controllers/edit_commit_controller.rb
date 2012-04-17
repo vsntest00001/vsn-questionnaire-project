@@ -1,0 +1,2 @@
+class EditCommitController < ApplicationController
+end

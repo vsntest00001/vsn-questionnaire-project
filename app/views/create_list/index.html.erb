@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <title>custom page</title>
+    </head>
+    <body>
+    	<table width=100%>
+    		<tr>
+    			<td>
+                    <%= image_tag("logo_header_01.gif") %>
+					<hr width=100%>
+    			</td>
+    		</tr>
+    	</table>
+    	<table align=center>
+    		<tr>
+    			<td>
+		    		編集ページ
+				</td>
+			</tr>
+    		<tr>
+    			<td>
+    				<table border="0"><tr>
+    					<td>
+    				アンケート１　　回答期間：	2012/01/01 ～ 2012/02/01
+    				    </td>
+    					<td>
+<%= form_tag( :action => :valid, :method => :get) do %>
+    <%= submit_tag "有効" %>
+<% end %>
+    				    </td>
+    					<td>
+<%= form_tag( :controller => :edit, :method => :get) do %>
+    <%= submit_tag "編集" %>
+<% end %>
+    				    </td>
+    					<td>
+<%= form_tag( :action => :delete_confirm, :method => :get) do %>
+    <%= submit_tag "削除" %>
+<% end %>
+    				    </td>
+    				</tr></table>
+				</td>
+			</tr>
+			<tr>
+    			<td>
+    				<table border="0"><tr>
+    					<td>
+    				アンケート２　　回答期間：	2012/02/01 ～ 2012/03/01
+    				    </td>
+    					<td>
+<%= form_tag( :action => :invalid, :method => :get) do %>
+    <%= submit_tag "無効" %>
+<% end %>
+    				    </td>
+    					<td>
+<%= form_tag( :controller => :edit, :method => :get) do %>
+    <%= submit_tag "編集" %>
+<% end %>
+    				    </td>
+    					<td>
+<%= form_tag( :action => :delete_confirm, :method => :get) do %>
+    <%= submit_tag "削除" %>
+<% end %>
+    				    </td>
+    				</tr></table>
+				</td>
+			</tr>
+			<tr>
+    			<td>
+    				<table border="0"><tr>
+    					<td>
+    				アンケート３　　回答期間：	2012/03/01 ～ 2012/04/01
+    				    </td>
+    					<td>
+<%= form_tag( :action => :invalid, :method => :get) do %>
+    <%= submit_tag "有効" %>
+<% end %>
+    				    </td>
+    					<td>
+<%= form_tag( :controller => :edit, :method => :get) do %>
+    <%= submit_tag "編集" %>
+<% end %>
+    				    </td>
+    					<td>
+<%= form_tag( :action => :delete_confirm, :method => :get) do %>
+    <%= submit_tag "削除" %>
+<% end %>
+    				    </td>
+    				</tr></table>
+				</td>
+			</tr>
+    		<tr>
+    			<td>
+<%= form_tag( :controller => :new, :method => :get) do %>
+    <%= submit_tag "新規作成" %>
+<% end %>
+				</td>
+			</tr>
+    		<tr>
+    			<td>
+<%= form_tag( :controller => :menu, :method => :get) do %>
+    <%= submit_tag "back" %>
+<% end %>
+				</td>
+			</tr>
+    	</table>
+    </body>
+</html>

@@ -1,0 +1,2 @@
+module EditCommitHelper
+end

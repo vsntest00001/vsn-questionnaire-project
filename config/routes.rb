@@ -1,7 +1,8 @@
 VsnQuestionnaireProject::Application.routes.draw do
 #  get "test/index"
   root :to => "test#index"
-
+  get ":controller(/:action)" => ":controller"
+  post ":controller(/:action)" => ":controller"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

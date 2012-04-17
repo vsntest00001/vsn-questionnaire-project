@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>delete_conf page</title>
+    </head>
+    <body>
+    	<table width=100%>
+    		<tr>
+    			<td>
+    				<img src="img/logo_header_01.gif">
+					<hr width=100%>
+    			</td>
+    		</tr>
+    	</table>
+    	<table align=center>
+    		<tr>
+    			<td>
+		    		アンケート削除確認画面
+				</td>
+			</tr>
+			<tr>
+				<td>
+					”アンケートX”を削除しますがよろしいですか？
+				</td>
+			</tr>
+			<tr>
+    			<td>
+<%= form_tag( :action => :delete, :method => :get) do %>
+    <%= submit_tag "送信" %>
+<% end %>
+<%= form_tag( :controller => :create_list, :method => :get) do %>
+    <%= submit_tag "back" %>
+<% end %>
+				</td>
+			</tr>
+		</table>
+    </body>
+</html>

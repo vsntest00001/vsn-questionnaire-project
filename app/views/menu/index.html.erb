@@ -14,31 +14,25 @@
             </tr>
         </table>
         <table align=center>
-<%= form_tag(:action => :input, :method => :get) do %>
+<%= form_tag :action => :sendpage, :method => :get do %>
             <tr>
                 <td>
-    <%= submit_tag "アンケート入力" %>
+    <%= submit_tag 'input', :name =>'send_input', :value => "アンケート入力" %>
                 </td>
             </tr>
-<% end %>
-<%= form_tag(:action => :input, :method => :get) do %>
             <tr>
                 <td>
-    <%= submit_tag "アンケート集計" %>
+    <%= submit_tag 'total', :name =>'send_total', :value => "アンケート集計" %>
                 </td>
             </tr>
-<% end %>
-<%= form_tag( :controller => :create_list, :method => :get) do %>
             <tr>
                 <td>
-    <%= submit_tag "アンケート編集" %>
+    <%= submit_tag 'create_list', :name =>'send_create_list', :value => "アンケート編集" %>
                 </td>
             </tr>
-<% end %>
-<%= form_tag(:action => :input, :method => :get) do %>
             <tr>
                 <td>
-    <%= submit_tag "logout" %>
+    <%= submit_tag 'logout', :name =>'send_logout', :value => "logout" %>
                 </td>
             </tr>
 <% end %>

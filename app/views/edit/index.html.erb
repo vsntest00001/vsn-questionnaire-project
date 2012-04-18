@@ -14,6 +14,7 @@
     			</td>
     		</tr>
     	</table>
+    <%= form_tag :action => :sendpage, :method => :get do %>
     	<table align=center>
 			<tr>
     			<td>
@@ -455,14 +456,12 @@
 			</tr>
     		<tr>
     			<td>
-<%= form_tag( :action => :confirm, :method => :get) do %>
-    <%= submit_tag "確認" %>
-<% end %>
-<%= form_tag( :controller => :create_list, :method => :get) do %>
-    <%= submit_tag "back" %>
-<% end %>
+        <%= submit_tag 'edit_confirm', :name =>'send_edit_confirm', :value => "確認" %>
+        &nbsp;
+        <%= submit_tag 'create_list', :name =>'send_create_list', :value => "back" %>
 				</td>
 			</tr>
     	</table>
+    <% end %>
     </body>
 </html>

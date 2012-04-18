@@ -22,78 +22,38 @@
 		    		編集ページ
 				</td>
 			</tr>
-    		<tr>
-    			<td>
+
+<% @questionaire.each do |hoge| %>
+    <%= form_tag :action => :sendpage, :method => :get do %>
+           <tr>
+                <td>
     				<table border="0"><tr>
     					<td>
-    				アンケート１　　回答期間：	2012/01/01 ～ 2012/02/01
+    				<%= hoge[:questname]%>　　回答期間： 　　2012/01/01 ～ 2012/02/01
     				    </td>
     					<td>
-<%= form_tag( :action => :valid, :method => :get) do %>
-    <%= submit_tag "有効" %>
-<% end %>
+        <% if hoge[:validstatus] %>
+            <%= submit_tag 'invalid', :name =>'send_invalid', :value => "無効" %>
+        <% end %>
+        <% if hoge[:validstatus] == nil || hoge[:validstatus] == false %>
+            <%= submit_tag 'valid', :name =>'send_valid', :value => "有効" %>
+        <% end %>
     				    </td>
     					<td>
-<%= form_tag( :controller => :edit, :method => :get) do %>
-    <%= submit_tag "編集" %>
-<% end %>
+        <%= submit_tag 'edit', :name =>'send_edit', :value => "編集" %>
     				    </td>
     					<td>
-<%= form_tag( :action => :delete_confirm, :method => :get) do %>
-    <%= submit_tag "削除" %>
-<% end %>
+        <%= submit_tag 'delete_confirm', :name =>'send_delete_confirm', :value => "削除" %>
     				    </td>
     				</tr></table>
-				</td>
-			</tr>
-			<tr>
-    			<td>
-    				<table border="0"><tr>
-    					<td>
-    				アンケート２　　回答期間：	2012/02/01 ～ 2012/03/01
-    				    </td>
-    					<td>
-<%= form_tag( :action => :invalid, :method => :get) do %>
-    <%= submit_tag "無効" %>
+                </td>
+            </tr>
+        <%= hidden_field_tag 'validstatus', hoge[:validstatus] %>
+        <%= hidden_field_tag 'questid', hoge[:questid] %>
+
+    <% end %>
 <% end %>
-    				    </td>
-    					<td>
-<%= form_tag( :controller => :edit, :method => :get) do %>
-    <%= submit_tag "編集" %>
-<% end %>
-    				    </td>
-    					<td>
-<%= form_tag( :action => :delete_confirm, :method => :get) do %>
-    <%= submit_tag "削除" %>
-<% end %>
-    				    </td>
-    				</tr></table>
-				</td>
-			</tr>
-			<tr>
-    			<td>
-    				<table border="0"><tr>
-    					<td>
-    				アンケート３　　回答期間：	2012/03/01 ～ 2012/04/01
-    				    </td>
-    					<td>
-<%= form_tag( :action => :invalid, :method => :get) do %>
-    <%= submit_tag "有効" %>
-<% end %>
-    				    </td>
-    					<td>
-<%= form_tag( :controller => :edit, :method => :get) do %>
-    <%= submit_tag "編集" %>
-<% end %>
-    				    </td>
-    					<td>
-<%= form_tag( :action => :delete_confirm, :method => :get) do %>
-    <%= submit_tag "削除" %>
-<% end %>
-    				    </td>
-    				</tr></table>
-				</td>
-			</tr>
+
     		<tr>
     			<td>
 <%= form_tag( :controller => :new, :method => :get) do %>

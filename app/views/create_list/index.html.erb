@@ -56,16 +56,16 @@
 
     		<tr>
     			<td>
-<%= form_tag( :controller => :new, :method => :get) do %>
-    <%= submit_tag "新規作成" %>
-<% end %>
+    <%= form_tag :action => :sendpage, :method => :get do %>
+        <%= submit_tag 'new', :name =>'send_new', :value => "新規作成" %>
+    <% end %>
 				</td>
 			</tr>
     		<tr>
     			<td>
-<%= form_tag( :controller => :menu, :method => :get) do %>
-    <%= submit_tag "back" %>
-<% end %>
+    <%= form_tag :action => :sendpage, :method => :get do %>
+        <%= submit_tag 'menu', :name =>'send_menu', :value => "back" %><br/>
+    <% end %>
 				</td>
 			</tr>
     	</table>

@@ -1,7 +1,7 @@
 class EditController < ApplicationController
-  def index
+    def index
 
-  end
+    end
 
     # ボタン押下後のメソッド
     def sendpage

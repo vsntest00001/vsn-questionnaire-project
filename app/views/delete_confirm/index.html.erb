@@ -14,6 +14,7 @@
     			</td>
     		</tr>
     	</table>
+    <%= form_tag :action => :sendpage, :method => :get do %>
     	<table align=center>
     		<tr>
     			<td>
@@ -27,13 +28,11 @@
 			</tr>
 			<tr>
     			<td>
-<%= form_tag( :action => :delete, :method => :get) do %>
-    <%= submit_tag "送信" %>
-<% end %>
-<%= form_tag( :controller => :create_list, :method => :get) do %>
-    <%= submit_tag "back" %>
-<% end %>
+        <%= submit_tag 'delete', :name =>'send_delete', :value => "送信" %>
+        &nbsp;
+        <%= submit_tag 'create_list', :name =>'send_create_list', :value => "back" %>
 				</td>
+    <% end %>
 			</tr>
 		</table>
     </body>

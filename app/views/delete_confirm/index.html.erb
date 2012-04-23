@@ -6,34 +6,21 @@
         <title>delete_conf page</title>
     </head>
     <body>
-    	<table width=100%>
-    		<tr>
-    			<td>
-    				<img src="img/logo_header_01.gif">
-					<hr width=100%>
-    			</td>
-    		</tr>
-    	</table>
-    <%= form_tag :action => :sendpage, :method => :get do %>
-    	<table align=center>
-    		<tr>
-    			<td>
-		    		アンケート削除確認画面
-				</td>
-			</tr>
-			<tr>
-				<td>
-					”アンケートX”を削除しますがよろしいですか？
-				</td>
-			</tr>
-			<tr>
-    			<td>
-        <%= submit_tag 'delete', :name =>'send_delete', :value => "送信" %>
-        &nbsp;
-        <%= submit_tag 'create_list', :name =>'send_create_list', :value => "back" %>
-				</td>
-    <% end %>
-			</tr>
-		</table>
+    	<div width=100%>
+            <%= image_tag("logo_header_01.gif") %>
+			<hr width=100%>
+    	</div>
+<%= form_tag :action => :sendpage, :method => :get do %>
+    	<div align=center>
+    		<p>アンケート削除確認画面</p>
+			<p>
+				”アンケートX”を削除しますがよろしいですか？
+			</p>
+			<p>
+               <%= submit_tag 'delete', :name =>'send_delete', :value => "送信" %>
+               <%= submit_tag 'create_list', :name =>'send_create_list', :value => "戻る" %>
+			</p>
+		</div>
+<% end %>
     </body>
 </html>

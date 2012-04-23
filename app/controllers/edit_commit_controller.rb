@@ -1,5 +1,14 @@
 class EditCommitController < ApplicationController
+    def initialize
+    end
+
+    ## 更新完了画面
     def index
+
+    end
+
+    ## 作成完了画面
+    def create
 
     end
 

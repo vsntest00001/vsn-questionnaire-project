@@ -6,32 +6,20 @@
         <title>delete_end page</title>
     </head>
     <body>
-    	<table width=100%>
-    		<tr>
-    			<td>
-                    <%= image_tag("logo_header_01.gif") %>
-					<hr width=100%>
-    			</td>
-    		</tr>
-    	</table>
+    	<div width=100%>
+            <%= image_tag("logo_header_01.gif") %>
+			<hr width=100%>
+    	</div>
     <%= form_tag :action => :sendpage, :method => :get do %>
-    	<table align=center>
-    		<tr>
-    			<td>
-    				アンケート削除完了画面
-				</td>
-			</tr>
-			<tr>
-				<td>
-					アンケートの削除に成功しました。
-				</td>
-			</tr>
-			<tr>
-				<td>
-        <%= submit_tag 'create_list', :name =>'send_create_list', :value => "back" %>
-				</td>
-			</tr>
-    	</table>
+    	<div align=center>
+    		<p>アンケート削除完了画面</p>
+			<p>
+				アンケートの削除に成功しました。
+			</p>
+			<p>
+        <%= submit_tag 'create_list', :name =>'send_create_list', :value => "戻る" %>
+			</p>
+    	</div>
     <% end %>
     </body>
 </html>

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>hensyuu page</title>
+        <title>new page</title>
     </head>
     <body>
     	<div width=100%>
@@ -14,7 +14,7 @@
     	<div align=left style="position: absolute;left: 30%">
 			<p>
 		    	アンケート名：
-	    		<input type="text" value="hogeアンケート" /><br />
+	    		<input type="text" value="" /><br />
 	    		備考：
 				<textarea></textarea><br />
 				回答期間：
@@ -246,11 +246,11 @@
 					<option value="radio">ラジオボタン</option>
 				</select>
 			</p>
-			<p>
-                <%= submit_tag 'edit_confirm', :name =>'send_edit_confirm', :value => "確認" %>
-                <%= submit_tag 'create_list', :name =>'send_create_list', :value => "戻る" %>
+	    	<p>
+        <%= submit_tag 'new_confirm', :name =>'send_new_confirm', :value => "確認" %>
+        <%= submit_tag 'create_list', :name =>'send_create_list', :value => "戻る" %>
 			</p>
-	   	</div>
+    	</div>
     <% end %>
     </body>
 </html>

@@ -6,32 +6,17 @@
         <title>nyuuryoku page</title>
     </head>
     <body>
-    	<table width=100%>
-    		<tr>
-    			<td>
-                    <%= image_tag("logo_header_01.gif") %>
-					<hr width=100%>
-    			</td>
-    		</tr>
-    	</table>
+    	<div width=100%>
+            <%= image_tag("logo_header_01.gif") %>
+			<hr width=100%>
+    	</div>
     <%= form_tag :action => :sendpage, :method => :get do %>
-    	<table align=center>
-    		<tr>
-    			<td>
-    				アンケート作成完了画面
-				</td>
-			</tr>
-			<tr>
-				<td>
-					アンケートの登録に成功しました。
-				</td>
-			</tr>
-			<tr>
-				<td>
+    	<div align=center>
+			アンケート作成・編集完了画面<br />
+			アンケートの作成・編集に成功しました。<br />
     <%= submit_tag 'send_create_list', :name =>'send_create_list', :value => "完了" %>
-				</td>
-			</tr>
-    	</table>
+    	</div>
     <% end %>
     </body>
 </html>
+

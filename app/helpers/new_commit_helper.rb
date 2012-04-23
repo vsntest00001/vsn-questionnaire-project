@@ -1,2 +1,0 @@
-module NewCommitHelper
-end

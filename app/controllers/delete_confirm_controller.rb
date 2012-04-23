@@ -1,4 +1,7 @@
 class DeleteConfirmController < ApplicationController
+    def initialize
+    end
+
     def index
 
     end

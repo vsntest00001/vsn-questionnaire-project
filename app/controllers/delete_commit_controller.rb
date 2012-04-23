@@ -1,4 +1,7 @@
 class DeleteCommitController < ApplicationController
+    def initialize
+    end
+
     def index
 
     end

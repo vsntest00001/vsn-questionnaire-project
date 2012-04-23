@@ -1,41 +1,29 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="UTF-8" />
+        <title>menu page</title>
     </head>
     <body>
-        <table width=100%>
-            <tr>
-                <td>
-                    <%= image_tag("logo_header_01.gif") %>
-                    <hr width=100%>
-                </td>
-            </tr>
-        </table>
-        <table align=center>
+    <div width=100%>
+        <%= image_tag("logo_header_01.gif") %>
+        <hr width=100%>
+    </div>
 <%= form_tag :action => :sendpage, :method => :get do %>
-            <tr>
-                <td>
-    <%= submit_tag 'input', :name =>'send_input', :value => "アンケート入力" %>
-                </td>
-            </tr>
-            <tr>
-                <td>
-    <%= submit_tag 'total', :name =>'send_total', :value => "アンケート集計" %>
-                </td>
-            </tr>
-            <tr>
-                <td>
-    <%= submit_tag 'create_list', :name =>'send_create_list', :value => "アンケート編集" %>
-                </td>
-            </tr>
-            <tr>
-                <td>
-    <%= submit_tag 'logout', :name =>'send_logout', :value => "logout" %>
-                </td>
-            </tr>
+    <div align=center>
+        <p>
+            <%= submit_tag 'input', :name =>'send_input', :value => "アンケート入力" %>
+        </p>
+        <p>
+            <%= submit_tag 'total', :name =>'send_total', :value => "アンケート集計" %>
+        </p>
+        <p>
+            <%= submit_tag 'create_list', :name =>'send_create_list', :value => "アンケート編集" %>
+        </p>
+        <p>
+            <%= submit_tag 'logout', :name =>'send_logout', :value => "logout" %>
+        </p>
+    </div>
 <% end %>
-        </table>
     </body>
 </html>

@@ -8,66 +8,40 @@
         <title>custom page</title>
     </head>
     <body>
-    	<table width=100%>
-    		<tr>
-    			<td>
-                    <%= image_tag("logo_header_01.gif") %>
-					<hr width=100%>
-    			</td>
-    		</tr>
-    	</table>
-    	<table align=center>
-    		<tr>
-    			<td>
-		    		編集ページ
-				</td>
-			</tr>
-
+    	<div width=100%>
+            <%= image_tag("logo_header_01.gif") %>
+			<hr width=100%>
+    	</div>
+    	<div align=left style="position: absolute; left: 30%">
+			<p>編集ページ</p>
 <% @questionaire.each do |hoge| %>
+			<p>
     <%= form_tag :action => :sendpage, :method => :get do %>
-           <tr>
-                <td>
-    				<table border="0"><tr>
-    					<td>
-    				<%= hoge[:questname]%>　　回答期間： 　　2012/01/01 ～ 2012/02/01
-    				    </td>
-    					<td>
+		<%= hoge[:questname]%>　　回答期間： 　　2012/01/01 ～ 2012/02/01
         <% if hoge[:validstatus] %>
             <%= submit_tag 'invalid', :name =>'send_invalid', :value => "無効" %>
         <% end %>
         <% if hoge[:validstatus] == nil || hoge[:validstatus] == false %>
             <%= submit_tag 'valid', :name =>'send_valid', :value => "有効" %>
         <% end %>
-    				    </td>
-    					<td>
         <%= submit_tag 'edit', :name =>'send_edit', :value => "編集" %>
-    				    </td>
-    					<td>
         <%= submit_tag 'delete_confirm', :name =>'send_delete_confirm', :value => "削除" %>
-    				    </td>
-    				</tr></table>
-                </td>
-            </tr>
         <%= hidden_field_tag 'validstatus', hoge[:validstatus] %>
         <%= hidden_field_tag 'questid', hoge[:questid] %>
 
     <% end %>
+			</p>
 <% end %>
-
-    		<tr>
-    			<td>
+			<p>
     <%= form_tag :action => :sendpage, :method => :get do %>
         <%= submit_tag 'new', :name =>'send_new', :value => "新規作成" %>
     <% end %>
-				</td>
-			</tr>
-    		<tr>
-    			<td>
+			</p>
+			<p>
     <%= form_tag :action => :sendpage, :method => :get do %>
-        <%= submit_tag 'menu', :name =>'send_menu', :value => "back" %><br/>
+        <%= submit_tag 'menu', :name =>'send_menu', :value => "戻る" %>
     <% end %>
-				</td>
-			</tr>
-    	</table>
+			</p>
+    	</div>
     </body>
 </html>

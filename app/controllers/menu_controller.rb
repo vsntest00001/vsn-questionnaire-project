@@ -1,6 +1,9 @@
 # coding: utf-8
 
 class MenuController < ApplicationController
+    def initialize
+    end
+
     def index
     end
 
